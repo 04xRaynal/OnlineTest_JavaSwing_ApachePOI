@@ -1045,7 +1045,7 @@ public class OnlineTest extends JFrame implements ActionListener{
 					Duration duration = Duration.ofMillis(remainingTime);
 					long minutes = duration.toMinutes();
 					duration = duration.minusMinutes(minutes);
-					long seconds = duration.toSeconds();
+					long seconds = duration.toMillis() / 1000;
 					
 					timeLabel.setText(decimalFormatter.format(minutes) + " : " + decimalFormatter.format(seconds));
 					
